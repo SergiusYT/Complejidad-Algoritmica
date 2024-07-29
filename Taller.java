@@ -19,7 +19,7 @@ public class Taller{
        
         StringBuilder resultados = new StringBuilder();
         for (int i = 0; i <= exponente; i++) {
-            int resultado = potencia(base, i);
+            int resultado = potenciar(base, i);
             resultados.append(base).append("^").append(i).append(" = ").append(resultado).append("\n");
         }
 
@@ -27,7 +27,7 @@ public class Taller{
     }
 
 
-    public static int potencia(int base, int exponente) {
+    public static int potenciar(int base, int exponente) {
         int resultado = 1;
         for (int i = 1; i <= exponente; i++) {
             resultado *= base;
