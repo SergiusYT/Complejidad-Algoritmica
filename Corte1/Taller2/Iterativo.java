@@ -1,22 +1,25 @@
-import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Potencia {
+public class Iterativo {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        long inicio = System.nanoTime();
 
-        System.out.print("Ingresa un numero entero positivo para la base: ");
-        BigInteger base = scanner.nextBigInteger();
+        Scanner scanner = new Scanner(System.in); 
+        System.out.print("Ingresa el exponente máximo entero positivo: ");
+        int exponente = scanner.nextInt();
+        int base = 2;
+        long resultado = 1;
 
-        System.out.print("Ingresa el exponente maximo entero positivo: ");
-        int exponenteMaximo = scanner.nextInt();
-
-        BigInteger resultado = BigInteger.ONE; 
-        for (int i = 0; i <= exponenteMaximo; i++) {
-            System.out.println(base + "^" + i + " = " + resultado);
-            resultado = resultado.multiply(base);
+        for (int i = 1; i <= exponente; i++) {
+            resultado *= base;
+            System.out.println(base + "^" + i + " = " + resultado);            
         }
-
+        
         scanner.close();
+        
+        long finalizacion = System.nanoTime();
+
+        long duracion = finalizacion - inicio;
+        System.out.println("\nEl algoritmo se ejecutó en: " + duracion + " nanosegundos");
     }
 }
