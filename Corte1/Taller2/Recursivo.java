@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Trabajo {
+public class Recursivo {
 
 	public static void main(String[] args) {
 
@@ -24,20 +24,14 @@ public class Trabajo {
 
 		System.out.println("El algoritmo se ejecuto en: " + duracion + " nanosegundos");
 
+		sc.close();
 	}
-
 	public static long calcularPotenciaRecursividad(int base, int exponente) {
-
-		long resultado = 1;
-
-		for (int i = 0; i < exponente; i++) {
-
-			resultado *= base;
-
+		if (exponente == 0) {
+			return 1;
+		} else {
+			return base * calcularPotenciaRecursividad(base, exponente - 1);
 		}
-
-		return resultado;
-
 	}
-
+	
 }
