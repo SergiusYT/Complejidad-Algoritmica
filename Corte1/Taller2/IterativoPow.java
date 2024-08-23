@@ -6,7 +6,7 @@ public class IterativoPow {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Ingrese un número entero positivo <= 20: ");
+        System.out.print("Ingresa el exponente máximo entero positivo: ");
         int n = scanner.nextInt();
 
         if (n <= 0 || n > 20) {
