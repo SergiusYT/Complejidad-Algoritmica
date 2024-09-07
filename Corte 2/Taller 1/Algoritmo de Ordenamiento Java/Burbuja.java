@@ -24,6 +24,8 @@ public class Burbuja {
         int[] swaps = {0};
 
         Random rand = new Random();
+        // Medir el tiempo de ejecución
+        long startTime = System.nanoTime();
         for (int i = 0; i < N; i++) {
             arr[i] = rand.nextInt(10); 
         }
@@ -36,6 +38,9 @@ public class Burbuja {
 
         bubbleSort(arr, N, comparisons, swaps);
 
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+
         System.out.println("Numeros ordenados:");
         for (int i = 0; i < N; i++) {
             System.out.print(arr[i] + " ");
@@ -44,9 +49,8 @@ public class Burbuja {
 
         System.out.println("Comparaciones: " + comparisons[0]);
         System.out.println("Intercambios: " + swaps[0]);
-        System.out.println("Estable: Si");
-        System.out.println("Insercion: No");
+
+        // Mostrar el tiempo de ejecución en nanosegundos
+        System.out.println("Tiempo de ejecucion en nanosegundos: " + duration);
     }
 }
-
-
