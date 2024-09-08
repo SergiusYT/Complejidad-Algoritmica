@@ -10,7 +10,7 @@ public class Quicksort {
 
         for (int j = low; j <= high - 1; j++) {
             comparisons[0]++;
-            if (arr[j] < pivot) {
+            if (arr[j] > pivot) {
                 i++;
                 temp = arr[i];
                 arr[i] = arr[j];
@@ -43,14 +43,14 @@ public class Quicksort {
         // Medir el tiempo de ejecución
         long startTime = System.nanoTime();
         for (int i = 0; i < N; i++) {
-            arr[i] = rand.nextInt(10); 
+            arr[i] = rand.nextInt(302501 - 300000) + 300000;
         }
 
         System.out.println("Numeros generados:");
         for (int i = 0; i < N; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println();
+        System.out.println("\n");
 
         quickSort(arr, 0, N - 1, comparisons, swaps);
 
@@ -61,7 +61,7 @@ public class Quicksort {
         for (int i = 0; i < N; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println();
+        System.out.println("\n\n");
 
         System.out.println("Comparaciones: " + comparisons[0]);
         System.out.println("Intercambios: " + swaps[0]);
