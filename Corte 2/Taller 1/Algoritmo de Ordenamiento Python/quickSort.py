@@ -8,7 +8,7 @@ def partition(arr, low, high, comparisons, swaps):
 
     for j in range(low, high):
         comparisons[0] += 1
-        if arr[j] < pivot:
+        if arr[j] > pivot:
             i += 1
             # Intercambiar elementos
             arr[i], arr[j] = arr[j], arr[i]
@@ -37,7 +37,7 @@ def main():
 
     # Generar números aleatorios de 0 a 9
     for i in range(N):
-        arr[i] = random.randint(0, 9)
+        arr[i] = random.randint(300000,302500)  # Números entre 300000 y 302500
 
     # Mostrar números generados
     print("Números generados:")

@@ -7,7 +7,7 @@ def selection_sort(arr, n, comparisons, swaps):
         min_idx = i
         for j in range(i + 1, n):
             comparisons[0] += 1
-            if arr[j] < arr[min_idx]:
+            if arr[j] > arr[min_idx]:
                 min_idx = j
         
         # Intercambio
@@ -26,7 +26,7 @@ def main():
 
     # Generar números aleatorios de 0 a 9
     for i in range(N):
-        arr[i] = random.randint(0, 9)
+        arr[i] = random.randint(300000,302500)  # Números entre 300000 y 302500
 
     # Mostrar números generados
     print("Números generados:")

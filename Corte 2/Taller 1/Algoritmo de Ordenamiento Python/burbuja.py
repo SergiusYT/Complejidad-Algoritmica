@@ -7,7 +7,7 @@ def bubble_sort(arr, comparisons, swaps):
     for i in range(n - 1):
         for j in range(n - i - 1):
             comparisons[0] += 1
-            if arr[j] > arr[j + 1]:
+            if arr[j] < arr[j + 1]:
                 # Intercambio
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swaps[0] += 1
@@ -23,7 +23,7 @@ def main():
 
     # Generar números aleatorios de 0 a 9
     for i in range(N):
-        arr[i] = random.randint(0, 9)  # Números entre 0 y 9
+        arr[i] = random.randint(300000,302500)  # Números entre 300000 y 302500
 
     # Mostrar números generados
     print("Números generados:")

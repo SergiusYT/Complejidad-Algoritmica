@@ -9,7 +9,7 @@ def insertion_sort(arr, comparisons, swaps):
         j = i - 1
 
         # Comparar e insertar
-        while j >= 0 and arr[j] > key:
+        while j >= 0 and arr[j] < key:
             comparisons[0] += 1
             arr[j + 1] = arr[j]
             j -= 1
@@ -28,7 +28,7 @@ def main():
 
     # Generar números aleatorios de 0 a 9
     for i in range(N):
-        arr[i] = random.randint(0, 9)  # Números entre 0 y 9
+        arr[i] = random.randint(300000,302500)  # Números entre 300000 y 302500
 
     # Mostrar números generados
     print("Números generados:")
