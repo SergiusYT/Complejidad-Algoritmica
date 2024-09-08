@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const N = 9000
+const N = 1000
 
 func partition(arr []int, low int, high int, comparisons *int, swaps *int) int {
 	pivot := arr[high]
@@ -41,10 +41,9 @@ func main() {
 	// Medir el tiempo de ejecución en nanosegundos
 	start := time.Now()
 
-	// Generar números aleatorios de 0 a 9
 	arr := make([]int, N)
 	for i := range arr {
-		arr[i] = rand.Intn(10) // Números entre 0 y 9
+		arr[i] = rand.Intn(2501) + 300000 // Números entre 300000 y 302500
 	}
 
 	// Mostrar números generados

@@ -31,10 +31,9 @@ func main() {
 	// Medir el tiempo de ejecución en nanosegundos
 	start := time.Now()
 
-	// Generar números aleatorios entre 0 y 9
 	arr := make([]int, N)
 	for i := range arr {
-		arr[i] = rand.Intn(10) // Números entre 0 y 9
+		arr[i] = rand.Intn(2501) + 300000 // Números entre 300000 y 302500
 	}
 
 	// Mostrar números generados
