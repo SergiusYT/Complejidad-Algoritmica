@@ -10,7 +10,7 @@ void selectionSort(int arr[], int n, int *comparisons, int *swaps) {
         min_idx = i;
         for (j = i + 1; j < n; j++) {
             (*comparisons)++;
-            if (arr[j] < arr[min_idx]) {
+            if (arr[j] > arr[min_idx]) {
                 min_idx = j;
             }
         }
@@ -36,7 +36,7 @@ int main() {
     // Generar números aleatorios de 0 a 9
     srand(time(0));
     for (int i = 0; i < N; i++) {
-        arr[i] = rand() % 10; // Números entre 0 y 9
+        arr[i] = rand() % 2501 + 300000; // Números entre 300000 y 302500
     }
 
     // Mostrar números generados

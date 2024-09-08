@@ -11,7 +11,7 @@ void insertionSort(int arr[], int n, int *comparisons, int *swaps) {
         j = i - 1;
 
         // Comparar e insertar
-        while (j >= 0 && arr[j] > key) {
+        while (j >= 0 && arr[j] < key) {
             (*comparisons)++;
             arr[j + 1] = arr[j];
             j = j - 1;
@@ -33,7 +33,7 @@ int main() {
     // Generar números aleatorios de 0 a 9
     srand(time(0));
     for (int i = 0; i < N; i++) {
-        arr[i] = rand() % 10; // Números entre 0 y 9
+        arr[i] = rand() % 2501 + 300000; // Números entre 300000 y 302500
     }
 
     // Mostrar números generados

@@ -11,7 +11,7 @@ int partition(int arr[], int low, int high, int *comparisons, int *swaps) {
 
     for (int j = low; j <= high - 1; j++) {
         (*comparisons)++;
-        if (arr[j] < pivot) {
+        if (arr[j] > pivot) {
             i++;
             // Swap
             temp = arr[i];
@@ -48,7 +48,7 @@ int main() {
     // Generar números aleatorios de 0 a 9
     srand(time(0));
     for (int i = 0; i < N; i++) {
-        arr[i] = rand() % 10; // Números entre 0 y 9
+        arr[i] = rand() % 2501 + 300000; // Números entre 300000 y 302500
     }
 
     // Mostrar números generados

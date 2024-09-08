@@ -9,7 +9,7 @@ void bubbleSort(int arr[], int n, int *comparisons, int *swaps) {
     for (i = 0; i < n - 1; i++) {
         for (j = 0; j < n - i - 1; j++) {
             (*comparisons)++;
-            if (arr[j] > arr[j + 1]) {
+            if (arr[j] < arr[j + 1]) {
                 // Swap
                 temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -31,7 +31,7 @@ int main() {
     // Generar números aleatorios de 0 a 9
     srand(time(0));
     for (int i = 0; i < N; i++) {
-        arr[i] = rand() % 10; // Números entre 0 y 9
+        arr[i] = rand() % 2501 + 300000; // Números entre 300000 y 302500
     }
 
     // Mostrar números generados
