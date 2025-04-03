@@ -1,0 +1,4 @@
+Algoritmo de búsqueda el que nos toco al grupo fue el Ramificación y Poda y es un programa desarrollado en rubi que usa un caso de rutas y transporte de entregas y genera una imagen donde se aprecia el proceso de ramificación y Poda ,
+
+
+El diagrama como tal lo genera
