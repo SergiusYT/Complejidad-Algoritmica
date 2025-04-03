@@ -1,0 +1,5 @@
+Para implementar el programa debe que tener el archivo .dot porque este es donde contiene todas las posibles rutas
+
+Adicionalmente el programa de ruby .rb donde esta el programa como tal
+
+para ejecutarlo necesita obligatoriamente instalar ruby y llegar ser el caso darle una variable de entorno a este lenguaje a su equipo
